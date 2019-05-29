@@ -13,7 +13,6 @@
     "app-manager"
   ],
   "author": "Tick42",
-  "license": "Apache-2.0",
   "dependencies": {
     "tick42-glue": "^4.4.0"
   }
