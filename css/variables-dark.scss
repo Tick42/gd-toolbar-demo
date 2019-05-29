@@ -1,0 +1,97 @@
+//dark theme variables
+$tick42-primary:                                #d1da27;
+$tick42-light:                                  #f7f7f7;
+$tick42-grey-1:                                 #afbfbe;
+$tick42-grey-2:                                 #28383a;
+$tick42-grey-3:                                 #425859;
+$tick42-grey-4:                                 #708090;
+$tick42-grey-5:                                 #1a2b30;
+
+$tick42-html-bg-color:                          $tick42-grey-5;
+$tick42-html-bg-color:                          $tick42-grey-5;
+
+//body
+$tick42-body-border:                            #485d60;
+$tick42-body-background-color:                  $tick42-grey-2;
+$tick42-body-color:                             $tick42-light;
+$tick42-body-font-size:                         81.3%;
+$tick42-body-font-weight:                       300;
+
+//md content
+$tick42-md-content-color:                       $tick42-body-color;
+
+//buttons
+$tick42-button-border-color:                    $tick42-grey-3;
+$tick42-button-color:                           $tick42-light;
+$tick42-button-bg-color:                        $tick42-body-background-color;
+$tick42-button-bg-hover:                        darken($tick42-primary, 3%);
+
+//md button
+$tick42-md-primary-button-color:                $tick42-grey-1;
+$tick42-md-primary-raised-color:                $tick42-primary;
+
+$tick42-md-button-icon-color:                   $tick42-grey-1;
+$tick42-md-button-icon-color-hover:             $tick42-primary;
+$tick42-md-button-icon-border:                  none;
+
+//md option
+$tick42-md-option-bg:                           $tick42-grey-5;
+$tick42-md-option-selected-color:               $tick42-primary;
+$tick42-md-option-bg-hover:                     darken($tick42-grey-5, 3%);
+$tick42-md-select-text-color:                   $tick42-grey-1;
+$tick42-md-select-text-color-hover:             $tick42-primary;
+$tick42-md-option-border-bottom-color:          lighten($tick42-md-option-bg, 5%);
+
+//scrollbar
+$tick42-webkit-scrollbar-bg:                    $tick42-grey-5;
+$tick42-webkit-scrollbar-thumb-bg:              $tick42-grey-3;
+
+//md list icon
+$tick42-md-icon-fill:                           $tick42-grey-1;
+$tick42-md-icon-color:                          $tick42-grey-1;
+
+//md badge
+$tick42-md-badge-bg:                            $tick42-grey-4;
+
+//highlight color
+$tick42-highlighted-color:                      $tick42-primary;
+
+//search bar (.functions)
+$tick42-search-bar-bg:                          transparent;
+$tick42-search-bar-border:                      solid 1px $tick42-grey-4;
+$tick42-search-bar-color:                       $tick42-light;
+
+//app list
+$tick42-app-list-favourite-icon-color:          $tick42-grey-4;
+$tick42-app-list-favourite-icon-color-hover:    $tick42-primary;
+$tick42-app-list-favourite-icon-color-selected: $tick42-primary;
+
+//md select value
+$tick42-md-select-value-color:                  $tick42-light;
+
+//md icon
+$tick42-md-icon-color:                          rgba(255, 255, 255, .87);
+$tick42-md-save-exit-icon-border-color:         $tick42-grey-1;
+$tick42-md-save-exit-icon-bg:                   $tick42-primary;
+
+//#divtoshow
+$tick42-div-to-show-color:                      $tick42-light;
+$tick42-div-to-show-bg:                         #36484c;
+$tick42-div-to-show-border-color:               rgba(0, 0, 0, .15);
+
+//dropdown
+$tick42-dropdown-item-color:                    $tick42-grey-1;
+
+//input
+$tick42-md-input-color:                         $tick42-grey-4;
+$tick42-md-input-bg:                            $tick42-grey-2;
+$tick42-md-input-border-color:                  $tick42-grey-3;
+$tick42-md-input-placeholder-color:             $tick42-grey-1;
+$tick42-md-input-container-color:               $tick42-light;
+
+// app toolbar
+$tick42-app-toolbar-bg:                         $tick42-grey-5;
+
+//app searchbar
+$tick42-app-search-wrapper-bg:                  $tick42-grey-2;
+$tick42-app-search-border-color:                transparent;

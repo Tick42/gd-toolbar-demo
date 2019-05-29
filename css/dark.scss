@@ -1,0 +1,288 @@
+@import 'variables-dark';
+
+html {
+  background-color: $tick42-html-bg-color;
+}
+
+body {
+  background-color: $tick42-body-background-color;
+  color: $tick42-body-color;
+  border:solid 1px $tick42-body-border;
+}
+
+.logo-container {
+  background: url("../images/acme-logo.svg") no-repeat center;
+  width: 40px;
+}
+
+.about-container {
+    color: $tick42-grey-1;
+}
+
+md-tooltip {
+  .md-content {
+    background-color: $tick42-primary;
+    color: $tick42-grey-2;
+  }
+}
+
+md-content {
+  color: $tick42-md-content-color;
+}
+
+.btn {
+  border: 1px solid $tick42-button-border-color;
+  color: $tick42-button-color;
+  background-color: $tick42-button-bg-color;
+}
+
+::-webkit-scrollbar {
+  background-color: $tick42-webkit-scrollbar-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $tick42-webkit-scrollbar-thumb-bg;
+}
+
+.searchInput {
+
+  .material-icons {
+
+    color: $tick42-app-list-favourite-icon-color;
+
+    &:hover {
+      color: $tick42-md-button-icon-color-hover;
+    }
+  }
+
+}
+
+md-list.custom-list {
+
+  md-icon {
+    fill: $tick42-md-icon-fill;
+    color: $tick42-md-icon-color;
+  }
+
+}
+
+.highlighted {
+  color: $tick42-highlighted-color;
+}
+
+.functions {
+  background: $tick42-search-bar-bg;
+  border: $tick42-search-bar-border;
+  color: $tick42-md-content-color;
+  &:hover {
+    color: $tick42-primary;
+  }
+}
+
+.app-list {
+
+  background: $tick42-app-search-wrapper-bg;
+
+  .favorite {
+
+    color: $tick42-app-list-favourite-icon-color;
+
+    &:hover {
+      color: $tick42-app-list-favourite-icon-color-hover;
+    }
+
+  }
+
+  .favorite-selected {
+    color: $tick42-app-list-favourite-icon-color-selected;
+  }
+
+}
+
+md-select {
+
+  &.md-default-theme:not([disabled]),
+  &:not([disabled]) {
+    &:focus {
+      md-select-value {
+        color: $tick42-md-select-text-color;
+        border-bottom-color: transparent;
+      }
+    }
+  }
+
+  md-select-value {
+    color: $tick42-md-select-text-color;
+    border-bottom-color: transparent;
+
+    &:hover {
+      color: $tick42-md-select-text-color-hover;
+    }
+  }
+
+}
+
+.saveonexit div {
+  md-checkbox:not(.md-checked) .md-icon {
+    border-color: $tick42-md-save-exit-icon-border-color !important;
+  }
+
+  md-checkbox.md-checked .md-icon {
+    background-color: $tick42-md-save-exit-icon-bg;
+  }
+
+}
+
+#divtoshow {
+  color: $tick42-div-to-show-color;
+  background-color: $tick42-div-to-show-bg;
+  border: $tick42-div-to-show-border-color;
+}
+
+.dropdown-item {
+  color: $tick42-dropdown-item-color;
+}
+
+md-input-container .md-input {
+  color: $tick42-md-input-color;
+  background-color: $tick42-md-input-bg;
+  border: 1px solid $tick42-md-input-border-color;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .2s ease-in-out;
+}
+
+input-container:not(.md-input-invalid).md-input-focused label,
+md-input-container.md-input-focused label:not(.md-no-float),
+md-input-container.md-input-has-placeholder label:not(.md-no-float),
+md-input-container.md-input-has-value label:not(.md-no-float),
+md-input-container .md-placeholder,
+md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+  color: $tick42-md-input-placeholder-color;
+}
+
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input,
+md-input-container:not(.md-input-invalid).md-input-focused .md-input,
+md-input-container.md-default-theme:not(.md-input-invalid).md-input-resized .md-input,
+md-input-container:not(.md-input-invalid).md-input-resized .md-input {
+  border: solid 1px #334547;
+  color: $tick42-md-input-container-color;
+}
+
+.md-badge {
+  background-color: $tick42-md-badge-bg;
+}
+
+.app-toolbar {
+  background-color: $tick42-app-toolbar-bg;
+}
+
+.app-search-wrapper {
+  background-color: $tick42-app-search-wrapper-bg;
+  border-top: solid 1px $tick42-app-search-border-color;
+}
+
+.md-button {
+
+  &.md-default-theme.md-primary:not([disabled]),
+  &.md-primary:not([disabled]) {
+    color: $tick42-md-primary-button-color;
+
+    md-icon {
+      color: $tick42-md-button-icon-color;
+
+      &:hover {
+        color: $tick42-md-button-icon-color-hover;
+      }
+    }
+
+  }
+
+  &.md-primary.md-raised {
+    &.layout-icon {
+      color: $tick42-body-color;
+    }
+
+    color: $tick42-md-primary-raised-color;
+    background-color: $tick42-button-bg-color;
+
+    &:hover {
+      background-color: $tick42-button-bg-hover;
+    }
+
+    md-icon {
+      color: $tick42-md-primary-raised-color;
+    }
+  }
+
+  &.md-icon-button {
+    color: $tick42-md-button-icon-color;
+  }
+
+}
+
+md-icon.no-hover:hover {
+  color: $tick42-md-icon-color !important;
+}
+
+
+
+.notifications-icon {
+  fill: $tick42-md-button-icon-color;
+
+  &:hover {
+    fill: $tick42-md-button-icon-color-hover;
+  }
+}
+
+.md-inline-list-icon-label {
+  color: $tick42-md-button-icon-color;
+
+  &:hover {
+    color: $tick42-md-button-icon-color-hover;
+  }
+}
+
+md-content {
+  background-color: $tick42-body-background-color;
+}
+
+md-select-menu {
+
+  md-content {
+
+    md-option {
+      background-color: $tick42-md-option-bg;
+      border-bottom: solid 1px $tick42-md-option-border-bottom-color;
+
+      &[selected] {
+        color: $tick42-md-option-selected-color;
+        background-color: $tick42-md-option-bg;
+      }
+
+      &:not([disabled]):hover {
+        background-color: $tick42-md-option-bg-hover;
+        color: $tick42-md-option-selected-color;
+      }
+
+      .md-text {
+        color: $tick42-md-select-text-color;
+      }
+
+      &:hover {
+        color: $tick42-md-select-text-color-hover;
+      }
+    }
+  }
+}
+
+.layout-wrap {
+  .md-button.md-primary.md-raised {
+
+    &:hover {
+      background-color:$tick42-primary !important;
+      color: $tick42-grey-5;
+      md-icon {
+        color: $tick42-grey-5;
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+<html lang="en" class="dark">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Glue and GSS Libraries -->
+  <script src="./lib/tick42-glue-4.4.0.min.js"></script>
+  <script src="./lib/tick42-gss-web.js"></script>
+
+  <link href="./lib/material-icons.css" rel="stylesheet">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="./css/angular-material.min.css">
+  <link rel="stylesheet" href="./css/angular-material-badge.min.css">
+
+  <link rel="stylesheet" href="./css/tick42-style.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body ng-app="clientContext" ng-cloak tabindex="-1">
+
+  <div ng-view></div>
+
+  <script src="./lib/jquery-3.3.1.min.js"></script>
+  <script src="./lib/jquery-ui.min.js"></script>
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="./lib/angular.js"></script>
+  <script src="./lib/angular-animate.min.js"></script>
+  <script src="./lib/angular-aria.min.js"></script>
+  <script src="./lib/angular-messages.min.js"></script>
+  <script src="./lib/angular-route.min.js"></script>
+  <script src="./lib/angular-material-badge.min.js"></script>
+  <script src="./lib/sortable.js"></script>
+
+
+  <!-- Angular Material Library -->
+  <script src="./lib/angular-material.min.js"></script>
+  <script src="./lib/angular-material-icons.min.js"></script>
+
+  <script src="./src/app.js"></script>
+  <script src="./src/components/services/glueServices.js"></script>
+  <script src="./src/components/controllers/homeController.js?v=28.2.1"></script>
+  <script>
+    if (window.glue42gd && glue42gd.theme) {
+      console.log('theme is', glue42gd.theme);
+      let allThemes = ['dark', 'light', 'colorful'];
+      let html = document.querySelector('html');
+      html.classList.remove(...allThemes);
+      html.classList.add(glue42gd.theme);
+    }
+  </script>
+</body>
+
+</html>

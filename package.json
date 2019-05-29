@@ -1,0 +1,20 @@
+{
+  "name": "tick42-app-toolbar",
+  "version": "3.5.0",
+  "description": "Glue42 AppManager",
+  "main": "index.html",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "app-manager"
+  ],
+  "author": "Tick42",
+  "license": "ISC",
+  "dependencies": {
+    "tick42-glue": "^4.4.0"
+  }
+}

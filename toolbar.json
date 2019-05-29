@@ -1,0 +1,30 @@
+[
+    {
+        "shell": true,
+        "autoStart": true,
+        "allowMultiple": false,
+        "title": "Glue42 Toolbar",
+        "type": "window",
+        "name": "toolbar",
+        "icon": "ENTER_ICON_URL_HERE",
+        "details": {
+            "url": "ENTER_URL_HERE",
+            "width": 452,
+            "height": 55,
+            "minHeight": 55,
+            "left": 400,
+            "top": 100,
+            "mode": "html",
+            "title": "Glue42 Toolbar",
+            "focus": true,
+            "isSticky": false,
+            "hasSizeAreas": false,
+            "hasMoveAreas": false,
+            "allowMinimize": false,
+            "allowCollapse": false,
+            "allowMaximize": false,
+            "allowClose": false,            
+            "moveAreaThickness": "0,6,0,0"
+        }
+    }
+]

@@ -1,0 +1,325 @@
+<div id="app-toolbar" class="app-toolbar md-padding" layout="row" layout-align="start start" ng-click="hide()"
+	tabindex="-1">
+	<div layout="row">
+		<div class="logo-container"></div>
+		<md-button md-no-ink ng-class="{'md-raised': (lastView==='app')}" class="md-icon-button md-primary "
+			style="padding:0px" aria-label="Settings" ng-click="changeView('app', $event)" tabindex="-1">
+			<md-tooltip md-autohide md-direction="{{currentBounds === 'large_bounds' ? 'bottom' : 'right'}}">
+				Applications</md-tooltip>
+			<md-icon md-font-library="material-icons">apps</md-icon>
+		</md-button>
+		<md-button md-no-ink ng-class="{'md-raised': (lastView==='save')}" class="md-icon-button md-primary"
+			style="padding:0px" aria-label="Settings" ng-click="changeView('save')" tabindex="-1">
+			<md-tooltip md-autohide md-direction="{{currentBounds === 'large_bounds' ? 'bottom' : 'right'}}">Save Layout
+			</md-tooltip>
+			<md-icon md-font-library="material-icons">save</md-icon>
+		</md-button>
+		<md-button md-no-ink ng-class="{'md-raised': (lastView==='load')}" class="md-icon-button md-primary"
+			style="padding:0px" aria-label="Settings" ng-click="changeView('load')" tabindex="-1">
+			<md-tooltip md-autohide md-direction="{{currentBounds === 'large_bounds' ? 'bottom' : 'right'}}">Restore
+				Layout</md-tooltip>
+			<md-icon md-font-library="material-icons">restore</md-icon>
+		</md-button>
+		<md-button md-no-ink md-badge="{{notificationCount}}" md-badge-offset="-1" class="md-icon-button md-primary"
+			ng-click="showPanel($event)" style="padding:0px" aria-label="Settings" tabindex="-1">
+			<md-tooltip md-autohide md-direction="{{currentBounds === 'large_bounds' ? 'bottom' : 'right'}}"
+				ng-if="currentBounds === 'large_bounds'">Notifications</md-tooltip>
+			<ng-md-icon icon="notifications" class="notifications-icon" ng-click="showPanel($event)"></ng-md-icon>
+		</md-button>
+		<div id="fav">
+			<ul ui-sortable ng-model="favoriteApps" class="favorite-apps">
+				<li ng-repeat="app in favoriteApps" class="md-icon-button md-button md-primary favorite-icon"
+					ng-click="startApp(app, $event)" aria-label="Settings" tabindex="-1">
+					<img ng-show="app.iconURL" ng-src="{{app.iconURL}}">
+					<img ng-hide="app.iconURL" data-ng-src="data:image/png;base64,{{app.icon ? app.icon: defaultIcon}}">
+				</li>
+			</ul>
+		</div>
+		<md-button md-no-ink ng-class="{'md-raised': (lastView==='settings')}"
+			class="md-icon-button md-primary app-settings" style="padding:0px" aria-label="Settings"
+			ng-click="changeView('settings')" tabindex="-1">
+			<md-tooltip md-autohide md-direction="{{currentBounds === 'large_bounds' ? 'bottom' : 'right'}}">Settings
+			</md-tooltip>
+			<md-icon md-font-library="material-icons">settings</md-icon>
+		</md-button>
+		<md-button md-no-ink class="md-icon-button md-primary app-exit" style="padding:0px" aria-label="Exit"
+			ng-click="stopAndSaveLayout()">
+			<md-tooltip md-autohide md-direction="{{currentBounds === 'large_bounds' ? 'bottom' : 'right'}}">Shutdown
+			</md-tooltip>
+			<md-icon md-font-library="material-icons" tabindex="-1">exit_to_app</md-icon>
+		</md-button>
+	</div>
+</div>
+
+<md-content ng-switch="menu" ng-click="hide()" class="md-primary" tabindex="-1">
+	<div style="height:100%">
+		<div ng-switch-when="settings">
+			<div class="p-all" layout="rows" layout-align="top left">
+				<md-list class="custom-list">
+					<md-list-item class="saveonexit col-6" ng-show="!isGD3">
+						<md-checkbox ng-model="checkboxes.saveOnExit" aria-label="Save On Exit"></md-checkbox>
+						<span class="md-inline-list-icon-label">Save On Exit</span>
+					</md-list-item>
+
+					<md-list-item class="saveonexit col-6">
+						<md-checkbox ng-model="checkboxes.showGettingStarted" aria-label="Show Tutorial on Startup">
+						</md-checkbox>
+						<span class="md-inline-list-icon-label">Show tutorial on startup</span>
+					</md-list-item>
+
+					<md-list-item class="saveonexit col-6">
+						<md-checkbox ng-model="checkboxes.searchInClients" aria-label="Search in Clients List">
+						</md-checkbox>
+						<span class="md-inline-list-icon-label">Search for clients</span>
+					</md-list-item>
+
+					<md-list-item class="saveonexit col-6">
+						<md-checkbox ng-model="checkboxes.searchInInstruments" aria-label="Search in Instruments List">
+						</md-checkbox>
+						<span class="md-inline-list-icon-label">Search for instruments</span>
+					</md-list-item>
+
+					<md-list-item class="col-6">
+						<md-input-container>
+							<label>Select theme</label>
+							<md-select ng-model="themeObj.selected" md-selected-text="themeSelectText()">
+								<md-option ng-repeat="theme in themeObj.all" value="{{theme.name}}">
+									{{theme.displayName}}</md-option>
+							</md-select>
+						</md-input-container>
+					</md-list-item>
+					<md-list-item class="col-6" ng-show="isGD3">
+						<div class="col-12 about-container">
+							<h3 class="">About</h3>
+							<p class="col-12">
+								Glue42 version: {{ glue42gdSettings.version }}
+								<br>
+								Gateway: {{ glue42gdSettings.gw }}
+								<br>
+								User: {{ glue42gdSettings.user }}
+							</p>
+						</div>
+					</md-list-item>
+				</md-list>
+			</div>
+		</div>
+		<div ng-switch-when="app">
+			<div id="appsDiv" class="md-padding" layout="column" layout-align="start start"
+				style="height: 100%; overflow-y: auto; padding: 0; padding-top: 55px;">
+				<div class="app-search-wrapper">
+					<md-input-container class="searchInput">
+						<label>Search</label>
+						<input type="search" ng-model="search.searchAppInput" ng-change="filter()"
+							ng-model-options='{ debounce: 200 }'>
+						<i class="material-icons favorite click-pointer" ng-click="showFavorites($event)"
+							tabindex="-1">grade</i>
+					</md-input-container>
+				</div>
+				<md-list class="app-list"
+					style="width: 100%; position: relative; display: inline-block; overflow-x: auto; overflow-y: scroll;">
+
+					<!-- clients -->
+					<md-list-item
+						ng-hide="!checkboxes.searchInSwimlaneWorkspaces || (search.searchAppInput === null || search.searchAppInput === '')"
+						ng-repeat="client in clients track by $index" tabindex="-1">
+						<div layout="column">
+
+							<div flex>
+								<i class="material-icons favorite click-pointer" tabindex="-1">face</i>
+
+								<md-button ng-show="client.name.isMatch" md-no-ink class="md-list-item-content"
+									id="{{client.name.value}}">
+									<span class="no-hover md-inline-list-icon-label">{{ client.name.value }}</span>
+								</md-button>
+
+								<md-button ng-show="client.email.isMatch && !client.name.isMatch" md-no-ink
+									class="md-list-item-content" id="{{client.email.value}}">
+									<span class="no-hover md-inline-list-icon-label">{{ client.email.value }}</span>
+								</md-button>
+
+								<md-button ng-show="client.id.isMatch" md-no-ink class="md-list-item-content"
+									id="{{client.id.value}}">
+									<span class="no-hover md-inline-list-icon-label">{{ client.id.value }}</span>
+								</md-button>
+							</div>
+
+							<div ng-repeat="clientApplication in availableApplicationsForClients track by $index">
+								<div flex class="search-app-input">
+									<md-tooltip>Open {{clientApplication.title}} with '{{client.name.value}}'
+									</md-tooltip>
+
+									<div class="functions click-pointer"
+										ng-click="startAppWithContext(clientApplication.name, { clientId: client.id.value })"
+										tabindex="-1" ng-bind-html="clientApplication.title">
+										{{clientApplication.title}}</div>
+								</div>
+							</div>
+
+							<div ng-repeat="layout in swimlaneLayouts track by $index">
+								<div flex class="search-app-input">
+									<md-tooltip>Open '{{layout.name}}' workspace with {{client.name.value}}
+									</md-tooltip>
+
+									<div class="functions click-pointer"
+										ng-click="openClientSwimlane(layout.name,client.id.value)"
+										tabindex="-1" ng-bind-html="layout.name">
+										<md-icon md-font-library="material-icons">dashboard</md-icon>
+										{{layout.name}} (workspace)</div>
+								</div>
+							</div>
+
+						</div>
+
+					</md-list-item>
+					<!-- clients -->
+
+					<!-- instruments -->
+					<md-list-item
+						ng-hide="!checkboxes.searchInInstruments || (search.searchAppInput === null || search.searchAppInput === '')"
+						ng-repeat="instrument in instruments track by $index" tabindex="-1">
+
+						<div layout="column">
+
+							<div flex class="instrument-container">
+								<i class="material-icons favorite click-pointer" tabindex="-1">trending_up</i>
+								<md-button md-no-ink class="md-list-item-content" id="{{instrument.ric}}">
+									<span class="no-hover md-inline-list-icon-label">{{ instrument.ric }}</span>
+								</md-button>
+							</div>
+
+							<div ng-repeat="instrumentApplication in availableApplicationsForInstruments track by $index"
+								class="instrument-container">
+								<div flex class="search-app-input">
+									<md-tooltip>Open {{instrumentApplication.title}} with '{{instrument.ric}}'
+									</md-tooltip>
+									<div class="functions click-pointer"
+										ng-click="startAppWithContext(instrumentApplication.name, { ric: instrument.ric })"
+										tabindex="-1" ng-bind-html="instrumentApplication.title">
+										{{instrumentApplication.title}}</div>
+								</div>
+							</div>
+
+						</div>
+
+					</md-list-item>
+					<!-- instruments -->
+
+					<!-- apps -->
+					<md-list-item hg-hide="apps.length === 0" ng-repeat="app in apps track by $index" tabindex="-1">
+						<div layout="column">
+
+							<div flex class="favorite-container">
+								<i class="material-icons favorite click-pointer"
+									ng-class="{'favorite-selected': app.favorite}" ng-click="addToFavorite(app, $event)"
+									tabindex="-1">grade</i>
+								<md-button md-no-ink class="md-list-item-content" id="{{app.name}}"
+									ng-click="startApp(app, $event)">
+									<img ng-show="app.iconURL && (app.type !== 'swimlane')"
+										style='width:30px; height: 30px; vertical-align: middle; margin-right: 5px;'
+										aria-label="{{app.title}}" ng-src="{{app.iconURL}}">
+									<img ng-hide="app.iconURL || (app.type === 'swimlane')"
+										style='width:30px; height: 30px; vertical-align: middle; margin-right: 5px;'
+										aria-label="{{app.title}}"
+										data-ng-src="data:image/png;base64,{{app.icon ? app.icon: defaultIcon}}">
+									<img ng-show="app.type === 'swimlane'"
+										style='width:30px; height: 30px; vertical-align: middle; margin-right: 5px;'
+										aria-label="{{app.title}}" data-ng-src="data:image/png;base64,{{swimlaneIcon}}"
+										class="swimlane-layout-img">
+									<span class="md-inline-list-icon-label">{{ app.title }}</span>
+								</md-button>
+							</div>
+
+							<div flex ng-hide="search.searchAppInput == null || search.searchAppInput == ''"
+								class="search-app-input">
+								<div class="functions click-pointer"
+									ng-click="search.searchAppInput=func.key; filterAppsByName()"
+									ng-repeat="func in userProperties[app.name] | filter: { key: search.searchAppInput } track by $index"
+									ng-bind-html="func.key | highlight:search.searchAppInput" tabindex="-1">
+								</div>
+							</div>
+
+						</div>
+						<section ng-show="app.mode !== 'exe'" style="position: absolute; right:1px;" layout="row"
+							layout-align="end start" layout-wrap>
+							<md-button md-no-ink class="md-icon-button md-primary instance-start-button"
+								ng-if="app.instances.length > 0" style="margin:0px;width:auto;padding:0px"
+								aria-label="Settings" tabindex="-1">
+								<i class="material-icons">desktop_windows
+									<i class="instance-start-icon" id="frameColor_{{app.instances[0].window.id}}"
+										ng-style="{'background-color': app.instances[0].window.frameColor}"></i>
+								</i>
+								<md-tooltip ng-if="app.instances.length === 1">{{ app.instances.length }} running
+									instance</md-tooltip>
+								<md-tooltip ng-if="app.instances.length > 1">{{ app.instances.length }} running
+									instances</md-tooltip>
+							</md-button>
+						</section>
+					</md-list-item>
+					<!-- apps -->
+
+				</md-list>
+			</div>
+		</div>
+		<div ng-switch-when="save" class="p-all" ng-init="updateRunningApps()">
+			<section layout="row" layout-align="top left" layout-wrap class="">
+				<md-autocomplete md-no-cache="true" md-input-name="autocompleteFieldSaveLayout"
+					md-selected-item="selectedLayout" md-search-text-change="layoutSearchChange(searchLayout)"
+					md-search-text="searchLayout" md-selected-item-change="selectedLayoutChange(item)"
+					md-items="item in querySearchLayouts(searchLayout)" md-item-text="item.name" md-autoselect="true"
+					md-floating-label="Layout">
+					<md-item-template>
+						<span>{{item.name}}</span>
+					</md-item-template>
+				</md-autocomplete>
+				<md-button md-no-ink aria-label="Save layout" class="md-primary md-raised btn"
+					ng-click="saveLayout(layout.name)" style="margin-top:20px;">
+					<!-- <md-tooltip md-autohide>Save layout</md-tooltip> -->
+					Save
+				</md-button>
+			</section>
+			<section layout="row" layout-align="top left" layout-wrap class="">
+				<p ng-if="runningApps.length === 1">{{runningApps.length}} running app</p>
+				<p ng-if="runningApps.length > 1 || runningApps.length === 0">{{runningApps.length}} running apps</p>
+			</section>
+			<section layout="row" layout-align="top left" layout-wrap class="">
+				<md-button md-no-ink class="md-icon-button md-primary instance-start-button"
+					ng-repeat="instance in runningApps track by $index" aria-label="Settings"
+					ng-click="activeInstance(instance)" style="margin: 0px; width: auto; padding: 0px;">
+					<i class="material-icons">desktop_windows
+						<i class="instance-start-icon"
+							ng-style="{ 'background-color': instance.window.frameColor }"></i>
+					</i>
+					<md-tooltip>{{instance.title || (instance.application && instance.application.title)}}</md-tooltip>
+				</md-button>
+			</section>
+		</div>
+		<div ng-switch-when="load">
+			<section layout="row" layout-align="top left" layout-wrap class="p-all">
+				<md-button md-no-ink aria-label="{{layout.name}}" class="md-primary md-raised btn layout-icon"
+					style='position: relative; height: 55px; min-width:55px'
+					ng-right-click="layout.type !== 'swimlane' && showMenu($event, layout)"
+					ng-repeat="layout in layouts | orderBy: 'name' track by $index" ng-click="loadLayout(layout)"
+					ng-style="layout.name === selectedLayout && {'background-color':'transparent'} ">
+					<md-tooltip style="position: absolute;">
+						{{layout.name}}
+						<span ng-if="layout.components.length">({{layout.components.length}} apps)</span>
+						<span
+							ng-if="(layout.type !== 'Global' && layout.type !== 'Activity') || layout.type === 'swimlane'">(Swimlane)</span>
+					</md-tooltip>
+					{{layout.name}}
+					<md-icon md-font-library="material-icons" ng-show="layout.name === defaultLayout">stars</md-icon>
+					<md-icon class="no-hover" md-font-library="material-icons"
+						ng-show="(layout.type !== 'Global' && layout.type !== 'Activity') || layout.type === 'swimlane'">
+						dashboard</md-icon>
+				</md-button>
+
+				<div id="divtoshow" style="display:none; z-index:1060; height: 40px;"
+					class="delete-layout dropdown-menu">
+					<button class="dropdown-item" style="cursor: pointer" ng-click="deleteLayout()">
+						Delete
+					</button>
+				</div>
+			</section>
+		</div>
+	</div>
+</md-content>

@@ -1,0 +1,742 @@
+html.dark html {
+  background-color: #1a2b30;
+}
+
+html.dark body {
+  background-color: #28383a;
+  color: #f7f7f7;
+  border: solid 1px #485d60;
+}
+
+html.dark .logo-container {
+  background: url("../images/acme-logo.svg") no-repeat center;
+  width: 40px;
+}
+
+html.dark .about-container {
+  color: #afbfbe;
+}
+
+html.dark md-tooltip .md-content {
+  background-color: #d1da27;
+  color: #28383a;
+}
+
+html.dark md-content {
+  color: #f7f7f7;
+}
+
+html.dark .btn {
+  border: 1px solid #425859;
+  color: #f7f7f7;
+  background-color: #28383a;
+}
+
+html.dark ::-webkit-scrollbar {
+  background-color: #1a2b30;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background-color: #425859;
+}
+
+html.dark .searchInput .material-icons {
+  color: #708090;
+}
+
+html.dark .searchInput .material-icons:hover {
+  color: #d1da27;
+}
+
+html.dark md-list.custom-list md-icon {
+  fill: #afbfbe;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+html.dark .highlighted {
+  color: #d1da27;
+}
+
+html.dark .functions {
+  background: transparent;
+  border: solid 1px #708090;
+  color: #f7f7f7;
+}
+
+html.dark .functions:hover {
+  color: #d1da27;
+}
+
+html.dark .app-list {
+  background: #28383a;
+}
+
+html.dark .app-list .favorite {
+  color: #708090;
+}
+
+html.dark .app-list .favorite:hover {
+  color: #d1da27;
+}
+
+html.dark .app-list .favorite-selected {
+  color: #d1da27;
+}
+
+html.dark md-select.md-default-theme:not([disabled]):focus md-select-value, html.dark md-select:not([disabled]):focus md-select-value {
+  color: #afbfbe;
+  border-bottom-color: transparent;
+}
+
+html.dark md-select md-select-value {
+  color: #afbfbe;
+  border-bottom-color: transparent;
+}
+
+html.dark md-select md-select-value:hover {
+  color: #d1da27;
+}
+
+html.dark .saveonexit div md-checkbox:not(.md-checked) .md-icon {
+  border-color: #afbfbe !important;
+}
+
+html.dark .saveonexit div md-checkbox.md-checked .md-icon {
+  background-color: #d1da27;
+}
+
+html.dark #divtoshow {
+  color: #f7f7f7;
+  background-color: #36484c;
+  border: rgba(0, 0, 0, 0.15);
+}
+
+html.dark .dropdown-item {
+  color: #afbfbe;
+}
+
+html.dark md-input-container .md-input {
+  color: #708090;
+  background-color: #28383a;
+  border: 1px solid #425859;
+  -webkit-transition: border-color .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .2s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+html.dark input-container:not(.md-input-invalid).md-input-focused label,
+html.dark md-input-container.md-input-focused label:not(.md-no-float),
+html.dark md-input-container.md-input-has-placeholder label:not(.md-no-float),
+html.dark md-input-container.md-input-has-value label:not(.md-no-float),
+html.dark md-input-container .md-placeholder,
+html.dark md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+  color: #afbfbe;
+}
+
+html.dark md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input,
+html.dark md-input-container:not(.md-input-invalid).md-input-focused .md-input,
+html.dark md-input-container.md-default-theme:not(.md-input-invalid).md-input-resized .md-input,
+html.dark md-input-container:not(.md-input-invalid).md-input-resized .md-input {
+  border: solid 1px #334547;
+  color: #f7f7f7;
+}
+
+html.dark .md-badge {
+  background-color: #708090;
+}
+
+html.dark .app-toolbar {
+  background-color: #1a2b30;
+}
+
+html.dark .app-search-wrapper {
+  background-color: #28383a;
+  border-top: solid 1px transparent;
+}
+
+html.dark .md-button.md-default-theme.md-primary:not([disabled]), html.dark .md-button.md-primary:not([disabled]) {
+  color: #afbfbe;
+}
+
+html.dark .md-button.md-default-theme.md-primary:not([disabled]) md-icon, html.dark .md-button.md-primary:not([disabled]) md-icon {
+  color: #afbfbe;
+}
+
+html.dark .md-button.md-default-theme.md-primary:not([disabled]) md-icon:hover, html.dark .md-button.md-primary:not([disabled]) md-icon:hover {
+  color: #d1da27;
+}
+
+html.dark .md-button.md-primary.md-raised {
+  color: #d1da27;
+  background-color: #28383a;
+}
+
+html.dark .md-button.md-primary.md-raised.layout-icon {
+  color: #f7f7f7;
+}
+
+html.dark .md-button.md-primary.md-raised:hover {
+  background-color: #c6ce23;
+}
+
+html.dark .md-button.md-primary.md-raised md-icon {
+  color: #d1da27;
+}
+
+html.dark .md-button.md-icon-button {
+  color: #afbfbe;
+}
+
+html.dark md-icon.no-hover:hover {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+html.dark .notifications-icon {
+  fill: #afbfbe;
+}
+
+html.dark .notifications-icon:hover {
+  fill: #d1da27;
+}
+
+html.dark .md-inline-list-icon-label {
+  color: #afbfbe;
+}
+
+html.dark .md-inline-list-icon-label:hover {
+  color: #d1da27;
+}
+
+html.dark md-content {
+  background-color: #28383a;
+}
+
+html.dark md-select-menu md-content md-option {
+  background-color: #1a2b30;
+  border-bottom: solid 1px #233a41;
+}
+
+html.dark md-select-menu md-content md-option[selected] {
+  color: #d1da27;
+  background-color: #1a2b30;
+}
+
+html.dark md-select-menu md-content md-option:not([disabled]):hover {
+  background-color: #152226;
+  color: #d1da27;
+}
+
+html.dark md-select-menu md-content md-option .md-text {
+  color: #afbfbe;
+}
+
+html.dark md-select-menu md-content md-option:hover {
+  color: #d1da27;
+}
+
+html.dark .layout-wrap .md-button.md-primary.md-raised:hover {
+  background-color: #d1da27 !important;
+  color: #1a2b30;
+}
+
+html.dark .layout-wrap .md-button.md-primary.md-raised:hover md-icon {
+  color: #1a2b30;
+}
+
+html.colorful html {
+  background-color: #1a2b30;
+}
+
+html.colorful body {
+  background-color: #28383a;
+  color: #f7f7f7;
+  border: solid 1px #485d60;
+}
+
+html.colorful .logo-container {
+  background: url("../images/acme-logo.svg") no-repeat center;
+  width: 40px;
+}
+
+html.colorful .about-container {
+  color: #afbfbe;
+}
+
+html.colorful md-tooltip .md-content {
+  background-color: #d1da27;
+  color: #28383a;
+}
+
+html.colorful md-content {
+  color: #f7f7f7;
+}
+
+html.colorful .btn {
+  border: 1px solid #425859;
+  color: #f7f7f7;
+  background-color: #28383a;
+}
+
+html.colorful ::-webkit-scrollbar {
+  background-color: #1a2b30;
+}
+
+html.colorful ::-webkit-scrollbar-thumb {
+  background-color: #425859;
+}
+
+html.colorful .searchInput .material-icons {
+  color: #708090;
+}
+
+html.colorful .searchInput .material-icons:hover {
+  color: #d1da27;
+}
+
+html.colorful md-list.custom-list md-icon {
+  fill: #afbfbe;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+html.colorful .highlighted {
+  color: #d1da27;
+}
+
+html.colorful .functions {
+  background: transparent;
+  border: solid 1px #708090;
+  color: #f7f7f7;
+}
+
+html.colorful .functions:hover {
+  color: #d1da27;
+}
+
+html.colorful .app-list {
+  background: #28383a;
+}
+
+html.colorful .app-list .favorite {
+  color: #708090;
+}
+
+html.colorful .app-list .favorite:hover {
+  color: #d1da27;
+}
+
+html.colorful .app-list .favorite-selected {
+  color: #d1da27;
+}
+
+html.colorful md-select.md-default-theme:not([disabled]):focus md-select-value, html.colorful md-select:not([disabled]):focus md-select-value {
+  color: #afbfbe;
+  border-bottom-color: transparent;
+}
+
+html.colorful md-select md-select-value {
+  color: #afbfbe;
+  border-bottom-color: transparent;
+}
+
+html.colorful md-select md-select-value:hover {
+  color: #d1da27;
+}
+
+html.colorful .saveonexit div md-checkbox:not(.md-checked) .md-icon {
+  border-color: #afbfbe !important;
+}
+
+html.colorful .saveonexit div md-checkbox.md-checked .md-icon {
+  background-color: #d1da27;
+}
+
+html.colorful #divtoshow {
+  color: #f7f7f7;
+  background-color: #36484c;
+  border: rgba(0, 0, 0, 0.15);
+}
+
+html.colorful .dropdown-item {
+  color: #afbfbe;
+}
+
+html.colorful md-input-container .md-input {
+  color: #708090;
+  background-color: #28383a;
+  border: 1px solid #425859;
+  -webkit-transition: border-color .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .2s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+html.colorful input-container:not(.md-input-invalid).md-input-focused label,
+html.colorful md-input-container.md-input-focused label:not(.md-no-float),
+html.colorful md-input-container.md-input-has-placeholder label:not(.md-no-float),
+html.colorful md-input-container.md-input-has-value label:not(.md-no-float),
+html.colorful md-input-container .md-placeholder,
+html.colorful md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+  color: #afbfbe;
+}
+
+html.colorful md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input,
+html.colorful md-input-container:not(.md-input-invalid).md-input-focused .md-input,
+html.colorful md-input-container.md-default-theme:not(.md-input-invalid).md-input-resized .md-input,
+html.colorful md-input-container:not(.md-input-invalid).md-input-resized .md-input {
+  border: solid 1px #334547;
+  color: #f7f7f7;
+}
+
+html.colorful .md-badge {
+  background-color: #708090;
+}
+
+html.colorful .app-toolbar {
+  background-color: #1a2b30;
+}
+
+html.colorful .app-search-wrapper {
+  background-color: #28383a;
+  border-top: solid 1px transparent;
+}
+
+html.colorful .md-button.md-default-theme.md-primary:not([disabled]), html.colorful .md-button.md-primary:not([disabled]) {
+  color: #afbfbe;
+}
+
+html.colorful .md-button.md-default-theme.md-primary:not([disabled]) md-icon, html.colorful .md-button.md-primary:not([disabled]) md-icon {
+  color: #afbfbe;
+}
+
+html.colorful .md-button.md-default-theme.md-primary:not([disabled]) md-icon:hover, html.colorful .md-button.md-primary:not([disabled]) md-icon:hover {
+  color: #d1da27;
+}
+
+html.colorful .md-button.md-primary.md-raised {
+  color: #d1da27;
+  background-color: #28383a;
+}
+
+html.colorful .md-button.md-primary.md-raised.layout-icon {
+  color: #f7f7f7;
+}
+
+html.colorful .md-button.md-primary.md-raised:hover {
+  background-color: #c6ce23;
+}
+
+html.colorful .md-button.md-primary.md-raised md-icon {
+  color: #d1da27;
+}
+
+html.colorful .md-button.md-icon-button {
+  color: #afbfbe;
+}
+
+html.colorful md-icon.no-hover:hover {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+html.colorful .notifications-icon {
+  fill: #afbfbe;
+}
+
+html.colorful .notifications-icon:hover {
+  fill: #d1da27;
+}
+
+html.colorful .md-inline-list-icon-label {
+  color: #afbfbe;
+}
+
+html.colorful .md-inline-list-icon-label:hover {
+  color: #d1da27;
+}
+
+html.colorful md-content {
+  background-color: #28383a;
+}
+
+html.colorful md-select-menu md-content md-option {
+  background-color: #1a2b30;
+  border-bottom: solid 1px #233a41;
+}
+
+html.colorful md-select-menu md-content md-option[selected] {
+  color: #d1da27;
+  background-color: #1a2b30;
+}
+
+html.colorful md-select-menu md-content md-option:not([disabled]):hover {
+  background-color: #152226;
+  color: #d1da27;
+}
+
+html.colorful md-select-menu md-content md-option .md-text {
+  color: #afbfbe;
+}
+
+html.colorful md-select-menu md-content md-option:hover {
+  color: #d1da27;
+}
+
+html.colorful .layout-wrap .md-button.md-primary.md-raised:hover {
+  background-color: #d1da27 !important;
+  color: #1a2b30;
+}
+
+html.colorful .layout-wrap .md-button.md-primary.md-raised:hover md-icon {
+  color: #1a2b30;
+}
+
+html.light html {
+  background-color: #e9ebee;
+}
+
+html.light body {
+  background-color: #e9ebee;
+  color: #1a2b30;
+  border: solid 1px #485d60;
+}
+
+html.light .logo-container {
+  background: url("../images/acme-logo-dark.svg") no-repeat center;
+  width: 40px;
+}
+
+html.light .about-container {
+  color: #1a2b30;
+}
+
+html.light md-tooltip .md-content {
+  background-color: #3e3182;
+}
+
+html.light md-content {
+  color: #1a2b30;
+}
+
+html.light .btn {
+  border: 1px solid #425859;
+  color: #e9ebee;
+  background-color: #3e3182;
+}
+
+html.light ::-webkit-scrollbar {
+  background-color: #afbfbe;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background-color: #708090;
+}
+
+html.light .searchInput .material-icons {
+  color: #708090;
+}
+
+html.light .searchInput .material-icons:hover {
+  color: #ffbd15;
+}
+
+html.light md-list.custom-list md-icon {
+  fill: #afbfbe;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+html.light .highlighted {
+  color: #3e3182;
+}
+
+html.light .functions {
+  background: transparent;
+  border: solid 1px #708090;
+  color: #1a2b30;
+}
+
+html.light .functions:hover {
+  color: #3e3182;
+}
+
+html.light .app-list {
+  background: #e9ebee;
+}
+
+html.light .app-list .favorite {
+  color: #708090;
+}
+
+html.light .app-list .favorite:hover {
+  color: #3e3182;
+}
+
+html.light .app-list .favorite-selected {
+  color: #ffbd15;
+}
+
+html.light md-select.md-default-theme:not([disabled]):focus md-select-value, html.light md-select:not([disabled]):focus md-select-value {
+  color: #3e3182;
+  border-bottom-color: transparent;
+}
+
+html.light md-select md-select-value {
+  color: #3e3182;
+  border-bottom-color: transparent;
+}
+
+html.light md-select md-select-value:hover {
+  color: #ffbd15;
+}
+
+html.light .saveonexit div md-checkbox:not(.md-checked) .md-icon {
+  border-color: #afbfbe !important;
+}
+
+html.light .saveonexit div md-checkbox.md-checked .md-icon {
+  background-color: #3e3182;
+}
+
+html.light #divtoshow {
+  color: #1a2b30;
+  background-color: #36484c;
+  border: rgba(0, 0, 0, 0.15);
+}
+
+html.light .dropdown-item {
+  color: #afbfbe;
+}
+
+html.light md-input-container .md-input {
+  color: #708090;
+  background-color: #FFFEFD;
+  border: 1px solid #FFFEFD;
+  -webkit-transition: border-color .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .2s ease-in-out;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, color .2s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+html.light input-container:not(.md-input-invalid).md-input-focused label,
+html.light md-input-container.md-input-focused label:not(.md-no-float),
+html.light md-input-container.md-input-has-placeholder label:not(.md-no-float),
+html.light md-input-container.md-input-has-value label:not(.md-no-float),
+html.light md-input-container .md-placeholder,
+html.light md-input-container label:not(.md-no-float):not(.md-container-ignore) {
+  color: #425859;
+}
+
+html.light md-input-container.md-default-theme:not(.md-input-invalid).md-input-focused .md-input,
+html.light md-input-container:not(.md-input-invalid).md-input-focused .md-input,
+html.light md-input-container.md-default-theme:not(.md-input-invalid).md-input-resized .md-input,
+html.light md-input-container:not(.md-input-invalid).md-input-resized .md-input {
+  border: solid 1px #FFFEFD;
+  color: #1a2b30;
+}
+
+html.light .md-badge {
+  background-color: #708090;
+}
+
+html.light .app-toolbar {
+  background-color: #dbdee3;
+}
+
+html.light .app-search-wrapper {
+  background-color: #e9ebee;
+  border-top: solid 1px #afbfbe;
+}
+
+html.light .md-button.md-default-theme.md-primary:not([disabled]), html.light .md-button.md-primary:not([disabled]) {
+  color: #3e3182;
+}
+
+html.light .md-button.md-default-theme.md-primary:not([disabled]) md-icon, html.light .md-button.md-primary:not([disabled]) md-icon {
+  color: #3e3182;
+}
+
+html.light .md-button.md-default-theme.md-primary:not([disabled]) md-icon:hover, html.light .md-button.md-primary:not([disabled]) md-icon:hover {
+  color: #ffbd15;
+}
+
+html.light .md-button.md-primary.md-raised {
+  color: #3e3182;
+  background-color: #3e3182;
+}
+
+html.light .md-button.md-primary.md-raised.layout-icon {
+  color: #1a2b30;
+}
+
+html.light .md-button.md-primary.md-raised:hover {
+  background-color: #352a6f;
+}
+
+html.light .md-button.md-primary.md-raised md-icon {
+  color: #3e3182;
+}
+
+html.light .md-button.md-icon-button {
+  color: #3e3182;
+}
+
+html.light md-icon.no-hover:hover {
+  color: rgba(255, 255, 255, 0.87) !important;
+}
+
+html.light .notifications-icon {
+  fill: #3e3182;
+}
+
+html.light .notifications-icon:hover {
+  fill: #ffbd15;
+}
+
+html.light .md-inline-list-icon-label {
+  color: #3e3182;
+}
+
+html.light .md-inline-list-icon-label:hover {
+  color: #ffbd15;
+}
+
+html.light md-content {
+  background-color: #e9ebee;
+}
+
+html.light md-select-menu md-content md-option {
+  background-color: #dbdee3;
+  border-bottom: solid 1px #c4c9d1;
+}
+
+html.light md-select-menu md-content md-option[selected] {
+  color: #3e3182;
+  background-color: #dbdee3;
+}
+
+html.light md-select-menu md-content md-option:not([disabled]):hover {
+  background-color: #ccd1d8;
+  color: #3e3182;
+}
+
+html.light md-select-menu md-content md-option .md-text {
+  color: #3e3182;
+}
+
+html.light md-select-menu md-content md-option:hover {
+  color: #ffbd15;
+}
+
+html.light .layout-wrap .md-button.md-primary.md-raised {
+  color: #e9ebee;
+  background-color: #3e3182 !important;
+}
+
+html.light .layout-wrap .md-button.md-primary.md-raised md-icon {
+  color: #e9ebee;
+}
+
+html.light .layout-wrap .md-button.md-primary.md-raised:hover {
+  background-color: #352a6f !important;
+  color: #e9ebee;
+}
+/*# sourceMappingURL=tick42-style.css.map */
