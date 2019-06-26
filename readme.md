@@ -3,10 +3,10 @@
 
 The Toolbar in Glue42 Desktop is an application hub and an entry point, which allows the user to start other apps, save or load workspaces, change themes, manage notifications and settings. The Glue42 Desktop Demo Toolbar is a web application that can be modified or entirely replaced by a custom implementation. You can see the current version here:
 
-![Glue42 Desktop Demo Toolbar](https://docs.glue42.com/g4e/images/tutorial/gifs/1.2.gif)
+![Glue42 Desktop Demo Toolbar](images/toolbar.gif)
 
 
-# How to replace the build-in Glue42 Desktop Toolbar
+# How to replace the built-in Glue42 Desktop Toolbar
 
 0. Stop Glue42 Desktop, if running.
 
